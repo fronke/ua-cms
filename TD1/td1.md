@@ -5,7 +5,7 @@ Par petits groupes, faire une courte présentation des caractéristiques princip
 * Historique
 * Caracteristiques
 * Position sur le marché (part, concurrence, modèle économique…)
-* Exemple de sites qui l'utilisent
+* Exemples de sites qui l'utilisent
 * Avantages inconvénient
 * Démonstration pour présenter l’interface du CMS et la création de contenu
 
@@ -14,7 +14,7 @@ Temps de préparation : 30-45 min
 
 Temps de la présentation : 5-10 min
 
-Support : Slides simple ou screenshots au minimum pour la démonstration
+Support : Slides simples ou screenshots au minimum pour la démonstration
 
 ## Liste des CMS à répartir :
 

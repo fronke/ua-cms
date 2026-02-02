@@ -1,2 +1,2 @@
-# Lien vers le CM1
-https://github.com/...
+# Lien vers le PDF de la partie 1
+https://drive.google.com/file/d/19CyjEJrq62U_TtKID6QYzdoKRU4LVC6Z/view?usp=sharing
