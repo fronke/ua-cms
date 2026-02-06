@@ -42,6 +42,18 @@ open https://magento.test
 
 ## Configuration de Magento
 
+```
+Acces au back
+open https://magento.test/admin
+
+# Desactiver la double auth
+bin/magento module:disable Magento_AdminAdobeImsTwoFactorAuth Magento_AdminAdobeImsTwoFactorAuth Magento_TwoFactorAuth
+bin/magento setup:di:compile
+
+# Username: john.smith
+# Password: password123
+```
+
 Documentation de la version Commerce : https://experienceleague.adobe.com/en/docs/commerce
 
 * Créer quelques catégories.
