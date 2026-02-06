@@ -22,10 +22,10 @@ cd magento
 # Download the Docker Compose template:
 curl -s https://raw.githubusercontent.com/markshust/docker-magento/master/lib/template | bash
 
+# Copier/remplacer le contenu du fichier compose.dev-linux.yaml dans le fichier compose.dev.yaml
+
 # Download the version of Magento you want to use with:
 bin/download community 2.4.8-p3
-
-# Copier/remplacer le contenu du fichier compose.dev-linux.yaml dans le fichier compose.dev.yaml
 
 # Installation de quelques dependances systemes
 sudo apt install curl libnss3-tools unzip rsync
@@ -37,6 +37,10 @@ bin/setup magento.test
 bin/init
 
 open https://magento.test
+```
+
+```
+# Pour tout relancer depuis le debut, vous pouvez utiliser bin/removeall juste avant
 ```
 
 
