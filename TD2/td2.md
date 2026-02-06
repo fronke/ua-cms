@@ -22,6 +22,8 @@ curl -s https://raw.githubusercontent.com/markshust/docker-magento/master/lib/te
 # Download the version of Magento you want to use with:
 bin/download community 2.4.8-p3
 
+# Copier/remplacer le contenu du fichier compose.dev-linux.yaml dans le fichier compose.dev.yaml
+
 # Run the setup installer for Magento
 bin/setup magento.test
 
