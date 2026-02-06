@@ -12,6 +12,9 @@ docker compose version
 
 2. Installer l'environnement Docker Magento de Mark Shust : https://github.com/markshust/docker-magento
 
+Recuperer le token public et privé en suivant ce tuto : https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/authentication-keys
+On vous demandera les 2 clés à l'etape download
+
 ```bash
 mkdir -p magento
 cd magento
