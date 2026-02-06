@@ -24,6 +24,9 @@ bin/download community 2.4.8-p3
 
 # Copier/remplacer le contenu du fichier compose.dev-linux.yaml dans le fichier compose.dev.yaml
 
+# Installation de quelques dependances systemes
+sudo apt install curl libnss3-tools unzip rsync
+
 # Run the setup installer for Magento
 bin/setup magento.test
 
