@@ -78,3 +78,19 @@ Utilisez le code ci-dessous pour créer un fichier plop_index_index.xml dans le 
     </body>
 </page>
 ```
+
+Chaque page possède un fichier layout. Pour notre action de contrôleur, ce gestionnaire est `plop_index_index`. Dans notre fichier de mise en page, nous avons ajouté un bloc au conteneur de contenu et défini son template sur `plop.phtml`
+
+Créer dans le dossier `Univ/Cms/view/frontend/templates`
+
+```html
+<h1><?php echo $this->getPlopText(); ?></h1>
+```
+
+Ouvrez l'URL `/plop/index/index` dans votre navigateur pour vérifier le résultat.
+
+## Pour aller plus loin…
+
+> Placer le bloc `plop` sur les pages produits, apres le SKU du produit. Vous aurez besoin d'analyser le layout de la page produit pour le placer au bon endroit.
+
+> Afficher le temps restants avant xxh pour recevoir le produit dès demain ("Passez commande avant 12h (x heures restantes) pour recevoir ce produit à partir du 14/03/26")
