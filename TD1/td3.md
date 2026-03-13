@@ -24,12 +24,11 @@ Créer le fichier `module.xml` dans le dossier `etc/` du module
 
 Installer le module avec la commande CLI `setup:upgrade` puis avec la commande `setup:di:compile`
 
-Vérifier que le module est installé de 4 façons differentes :
+Vérifier que le module est installé de 3 façons differentes :
 * Commande CLI
 * Fichier de configuration
-* Base de donnée
-* Backend Admin > Stores > Configuration > Advanced > Advanced
+* Base de donnée (si version)
 
 ## Pour aller plus loin…
 
-> Créer un deuxième module qui dépend du premier (grâce à la balise sequence) et l’installer, puis le désactiver avec la commande `module:disable`
+> Créer un deuxième module qui dépend du premier (grâce à la balise sequence) et l’installer, puis le désactiver en CLI
