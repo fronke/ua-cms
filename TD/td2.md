@@ -65,6 +65,13 @@ Vous rencontrez un message de ce style :
 ```SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Name or service not known In InstallCommand.php line 284: Parameter validation failed setup:install [...]```.
 Il y a a priori un problème d'accès de Magento à la base de données. Je pense que vous pouvez essayer de relancer toute l'installation (soit le conteneur docker de la BDD ne fonctionne pas, soit Magento n'a pas la bonne configuration de connexion).
 
+#### Bug lors du démarage de docker avec Opensearch
+Opensearch peut fail sans raison au démarrage à cause d'un timeout. Vous pouvez juste stopper et relancer l'environnement `bin/restart`
+
+#### Bug lors du démarrage ou au chargement d'une page
+```Exception #0 (Zend_Db_Adapter_Exception): SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Name or service not known```
+Le container db est corrompu, vous pouvez le stopper et le supprimer avec `bin/stop && docker compose rm -f db`
+
 ## 2. Configuration de Magento
 
 Pour se connecter au backend, nous devons d'abord désactiver les modules qui gèrent la double authentification, elle ne fonctionnera pas en local.
