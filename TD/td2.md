@@ -45,8 +45,8 @@ bin/init
 open https://magento.test
 ```
 
-### Debuggage
-Si vous rencontrez des problèmes et que vous souhaitez relancer l'installation, vous pouvez jouer la commande `bin/removeall` puis repartir à partir de l'étape `bin/download`.
+### OSKOUR Ça démarre pas
+Si vous rencontrez des problèmes et que vous souhaitez relancer l'installation, vous pouvez jouer la commande `bin/removeall`, vider le dossier src (`rm -rf src`) puis repartir à partir de l'étape `bin/download`.
 
 Voici certains des problèmes rencontrés en TD et comment les contourner :
 
