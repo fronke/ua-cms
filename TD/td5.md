@@ -2,7 +2,7 @@
 
 Nous allons créer un nouvel attribut produit grâce au module et au script d'installation et d'update
 
-Créez le fichier `app/code/Univ/Cms/Setup/UpgradeData.php` avec le contenu suivant :
+Créez le fichier `Univ/Cms/Setup/UpgradeData.php` avec le contenu suivant :
 
 ```php
 <?php
@@ -10,16 +10,14 @@ declare(strict_types=1);
 
 namespace Univ\Cms\Setup;
 
-use Univ\Cms\Model\Attribute\Frontend\Material as Frontend;
-use Univ\Cms\Model\Attribute\Source\Material as Source;
-use Univ\Cms\Model\Attribute\Backend\Material as Backend;
+use Univ\Cms\Model\Attribute\Source\BatteryType as Source;
 use Magento\Catalog\Model\Product;
 use Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface;
-use Magento\Framework\Setup\InstallDataInterface;
+use Magento\Framework\Setup\UpgradeDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 
-class InstallData implements InstallDataInterface
+class UpgradeData implements UpgradeDataInterface
 {
     protected $eavSetupFactory;
 
@@ -39,12 +37,12 @@ class InstallData implements InstallDataInterface
      * @suppressWarnings(PHPMD.ExessiveMethodLength)
      * @SuppressWarnings(PHPMD.NPathComplexity)
      */
-  public function upgrade(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
+    public function upgrade(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
     {
         $setup->startSetup();
 
-        if (version_compare($context->getVersion(), '1.0.1', '<')) {        
-            
+        if (version_compare($context->getVersion(), '1.0.3', '<')) {
+
             $eavSetup = $this->eavSetupFactory->create();
             $eavSetup->addAttribute(
                 Product::ENTITY,
@@ -54,7 +52,7 @@ class InstallData implements InstallDataInterface
                     'type'          => 'varchar',
                     'label'         => 'Type de piles',
                     'input'         => 'select',
-                    'frontend'      => Frontend::class,
+                    'source'        => Source::class,
                     'required'      => false,
                     'sort_order'    => 50,
                     'global'        => ScopedAttributeInterface::SCOPE_GLOBAL,
@@ -72,7 +70,7 @@ class InstallData implements InstallDataInterface
 ```
 
 
-Créez le fichier `app/code/Univ/Cms/Model/Attribute/Source/BatteryType.php` suivant :
+Créez le fichier `Univ/Cms/Model/Attribute/Source/BatteryType.php` suivant :
 
 ```php
 <?php
@@ -102,7 +100,6 @@ class BatteryType extends AbstractSource
         return $this->_options;
     }
 }
-
 ```
 
 Changer la version du module en modifiant le fichier `etc/module.xml`
