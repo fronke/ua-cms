@@ -1,5 +1,9 @@
 # TD Final
 
+> 3 points sur la note finale
+> 
+> A présenter en 5 minutes avant l'examen du 26.03.2026
+
 ## Initialisation
 Créer la strucuture d'un nouveau module.
 
