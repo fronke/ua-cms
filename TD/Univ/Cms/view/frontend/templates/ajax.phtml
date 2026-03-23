@@ -1,0 +1,22 @@
+<a id="like-btn" class="action primary mb-1" href="#">J'aime bien</a>
+<script>
+    require(['jquery'], function ($) {
+
+        $('#like-btn').on('click', function () {
+
+            var productId = <?= $block->getRequest()->getParam('id') ?>;
+
+            $.ajax({
+                url: '/plop/index/ajax',
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    product_id: productId
+                },
+                success: function (response) {
+                    $( "#like-btn" ).replaceWith( "<h2>OK merci pour les " + response.likes_count + " likes!</h2>");
+                }
+            });
+        });
+    });
+</script>

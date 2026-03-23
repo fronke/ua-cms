@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <router id="standard">
+        <route id="plop" frontName="plop">
+            <module name="Univ_Cms"/>
+        </route>
+    </router>
+</config>
